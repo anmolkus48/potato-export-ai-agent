@@ -1,0 +1,21 @@
+name: Deploy Potato Export AI Agent
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Confirm repository files
+        run: |
+          echo "Repository checkout successful"
+          ls -la
